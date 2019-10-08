@@ -28,7 +28,7 @@ public final class PropertiesFileUtil {
         try {
             defaultProperties.load(resourceAsStream);
         } catch (IOException e) {
-            logger.error("load properties fail,place check config, exception {}", e);
+            logger.error("load defalut properties fail,place check config, exception {}", e);
         }
     }
 

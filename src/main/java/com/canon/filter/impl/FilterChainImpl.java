@@ -17,6 +17,7 @@ import java.util.List;
 @Component
 public class FilterChainImpl implements FilterChain<FilterBean> {
 
+    private static int defaultIndex = 0;
 
     @Autowired
     private List<Filter> filters;
@@ -36,4 +37,10 @@ public class FilterChainImpl implements FilterChain<FilterBean> {
         }
         filters.get(index).doFilter(filterBean, this, index);
     }
+
+    @Override
+    public void doFilter(FilterBean filterBean) {
+        doFilter(filterBean, defaultIndex);
+    }
+
 }

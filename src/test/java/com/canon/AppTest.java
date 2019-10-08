@@ -1,13 +1,13 @@
 package com.canon;
 
 import com.canon.filter.Filter;
+import com.canon.filter.FilterChain;
 import com.canon.filter.factory.FilterChainFactory;
 import com.canon.filter.impl.FilterChainImpl;
 import com.canon.model.FilterBean;
 import com.canon.util.SpringContextUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -40,7 +40,9 @@ public class AppTest {
     }
 
     @Test
-    public void testSPI(){
-        
+    public void testGetChainByConfig() {
+        FilterChain chain = FilterChainFactory.getChain();
+        chain.doFilter(new FilterBean());
+
     }
 }

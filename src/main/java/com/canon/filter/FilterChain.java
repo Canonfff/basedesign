@@ -14,4 +14,10 @@ public interface FilterChain<T> {
      * @param index 执行器索引
      */
     void doFilter(T t, int index);
+
+    /**
+     * 执行方法
+     * @param t 参数
+     */
+    void doFilter(T t);
 }
