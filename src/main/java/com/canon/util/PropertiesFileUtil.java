@@ -39,6 +39,7 @@ public final class PropertiesFileUtil {
      */
     public static String getProperties(String key) {
         Assert.notNull(key, "文件参数不能为空");
+        Assert.notNull(defaultProperties, "未加载配置文件...");
         return defaultProperties.getProperty(key);
     }
 
