@@ -38,4 +38,9 @@ public class AppTest {
     public void testSpringAndFilter() {
         FilterChainFactory.getChain("filterChainImpl").doFilter(new FilterBean(), 0);
     }
+
+    @Test
+    public void testSPI(){
+        
+    }
 }
