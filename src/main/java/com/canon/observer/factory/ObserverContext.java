@@ -23,7 +23,6 @@ public class ObserverContext<T> {
     public List<ObserverInterface> getObservers(T t) {
         Assert.notEmpty(observerInterfaces, "依赖注入失败或者不不存在该接口的实现");
         List<ObserverInterface> results = new ArrayList<ObserverInterface>();
-        Class<?> clazz = t.getClass();
         for (ObserverInterface instance : observerInterfaces) {
             Class implmentsObject = instance.getImplmentsObject();
             if (implmentsObject.isInstance(t)) {

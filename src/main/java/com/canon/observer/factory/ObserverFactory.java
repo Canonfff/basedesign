@@ -13,7 +13,7 @@ import java.util.List;
  * @Date: 2019/10/8 16:51
  * @Description:
  */
-@Component
+
 public abstract class ObserverFactory<T> {
 
     public static<T> List<ObserverInterface> getObservers(T t) {
