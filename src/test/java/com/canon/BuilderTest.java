@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.canon.builer.Director;
 import com.canon.builer.Material;
 import com.canon.builer.Product;
+import com.canon.builer.impl.OneBuilder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -24,5 +25,16 @@ public class BuilderTest {
         Product product = Director.getInstance(new Material()).construct();
         System.out.println(JSON.toJSONString(product));
 
+    }
+
+    @Test
+    public void  testThread() {
+        OneBuilder builder = new OneBuilder(new Material());
+        Product result = builder.getResult();
+        result.setPartA("123123");
+        OneBuilder oneBuilder = new OneBuilder(new Material());
+        Product result2 = oneBuilder.getResult();
+        System.out.println(JSON.toJSONString(result));
+        System.out.println(JSON.toJSONString(result2));
     }
 }

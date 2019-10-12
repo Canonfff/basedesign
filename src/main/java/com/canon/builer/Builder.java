@@ -16,13 +16,27 @@ public abstract class Builder {
         this.material = material;
     }
 
-    protected abstract void builderPartA();
+    protected void builderPartA() {
+        System.out.println("super set partA");
+        product.setPartB("super set partA");
+    }
 
-    protected abstract void builderPartB();
+    protected void builderPartB() {
+        System.out.println("super set partB");
+        product.setPartB("super set partB");
+    }
 
-    protected abstract void builderPartC();
+    protected void builderPartC() {
+        System.out.println("super set partC");
+        product.setPartC("super set partC");
+    }
 
-    protected abstract void build();
+    protected void build() {
+        builderPartA();
+        builderPartB();
+        builderPartC();
+        System.out.println("finish build");
+    }
 
     public Product getResult() {
         build();
