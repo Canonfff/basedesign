@@ -45,4 +45,9 @@ public class AppTest {
         chain.doFilter(new FilterBean());
 
     }
+    @Test
+    public void testGetInterface() {
+        FilterChain bean = SpringContextUtil.getBean(FilterChain.class);
+        System.err.println(bean);
+    }
 }
