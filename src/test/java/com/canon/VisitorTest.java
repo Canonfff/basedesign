@@ -1,9 +1,11 @@
 package com.canon;
 
+import com.canon.model.DefaultModel;
 import com.canon.visitor.Structure;
 import com.canon.visitor.VisitorInterface;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
@@ -29,5 +31,11 @@ public class VisitorTest {
     @Test
     public void testSpringVisitor() {
         structure.accept(visitorInterface);
+    }
+
+
+    @Test
+    public void testCopy() {
+        BeanUtils.copyProperties(new DefaultModel(), new DefaultModel());
     }
 }

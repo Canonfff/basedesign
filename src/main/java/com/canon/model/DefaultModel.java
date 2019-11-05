@@ -12,6 +12,16 @@ public class DefaultModel implements Serializable {
 
     private static final long serialVersionUID = 624491934498891975L;
 
+    public DefaultModel() {
+    }
+
+    public DefaultModel(DefaultModel defaultModel) {
+
+    }
+    public DefaultModel(Object... args) {
+
+    }
+
     private String defaultKey;
 
     public String getDefaultKey() {
@@ -20,5 +30,10 @@ public class DefaultModel implements Serializable {
 
     public void setDefaultKey(String defaultKey) {
         this.defaultKey = defaultKey;
+    }
+
+    public void cast(DefaultModel defaultModel) {
+        //BeanUtils.copyProperties(this, defaultModel);
+        defaultModel = this;
     }
 }
