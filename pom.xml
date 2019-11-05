@@ -113,7 +113,6 @@
             <artifactId>commons-lang</artifactId>
             <version>${common-lang}</version>
         </dependency>
-
     </dependencies>
 
     <build>
