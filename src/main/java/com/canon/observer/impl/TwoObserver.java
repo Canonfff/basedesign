@@ -1,6 +1,5 @@
 package com.canon.observer.impl;
 
-import com.canon.model.DefaultModel;
 import com.canon.model.TwoEvent;
 import com.canon.observer.ObserverInterface;
 import org.springframework.stereotype.Component;
