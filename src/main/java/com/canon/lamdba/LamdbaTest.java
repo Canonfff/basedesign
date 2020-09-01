@@ -2,6 +2,7 @@ package com.canon.lamdba;
 
 import com.google.common.collect.Lists;
 
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -13,7 +14,15 @@ import java.util.ArrayList;
 public class LamdbaTest {
 
     public static void main(String[] args) {
-        list();
+        // list();
+//        LambdaSub sub = new LambdaSub();
+//        sub.subExecute();
+        String url = "E:\\泰久信息工作笔记\\2020-06\\线上应急方案\\智慧旅游OTM平台应急预案（2020版）(1).docx";
+
+        File file = new File(url);
+        if (file.exists()) {
+            System.out.println(file.getName());
+        }
     }
 
     public static void list() {
