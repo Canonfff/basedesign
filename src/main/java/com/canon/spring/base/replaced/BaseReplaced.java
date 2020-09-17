@@ -11,11 +11,15 @@ import org.springframework.stereotype.Component;
  * @Version: 1.0
  */
 @Component
-@ReplacedMethod(name = "execute", replacer = "baseMethodReplace", argType = {"123","456"})
 public class BaseReplaced {
 
+    @ReplacedMethod(replacer = "baseMethodReplace", argType = {"123","456"})
     public void execute() {
         System.out.println("old method");
     }
 
+    @ReplacedMethod(replacer = "baseMethodReplace", argType = {"123","456"})
+    public void execute2() {
+        System.out.println("execute2");
+    }
 }

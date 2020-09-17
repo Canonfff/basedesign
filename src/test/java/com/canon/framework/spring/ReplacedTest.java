@@ -19,5 +19,6 @@ public class ReplacedTest extends BaseTest {
     public void replaceTest() {
         BaseReplaced bean = SpringContextUtil.getBean(BaseReplaced.class);
         bean.execute();
+        bean.execute2();
     }
 }
