@@ -1,6 +1,7 @@
 package com.canon.observer.impl;
 
 import com.canon.model.OneEvent;
+import com.canon.observer.AbstractObServer;
 import com.canon.observer.ObserverInterface;
 import org.springframework.stereotype.Component;
 
@@ -18,8 +19,4 @@ public class OneObserver implements ObserverInterface<OneEvent> {
         System.out.println("OneObserver do it work...");
     }
 
-    @Override
-    public Class<OneEvent> getImplmentsObject() {
-        return OneEvent.class;
-    }
 }

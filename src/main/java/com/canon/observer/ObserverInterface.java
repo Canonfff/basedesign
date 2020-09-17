@@ -1,5 +1,7 @@
 package com.canon.observer;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.EventListener;
 
 /**
@@ -21,6 +23,9 @@ public interface ObserverInterface<T> {
      * 获取泛型实例
      * @return
      */
-    Class<T> getImplmentsObject();
+    default Class<T> getImplmentsObject() {
+        Type type = ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+        return (Class<T>) type;
+    }
 
 }
