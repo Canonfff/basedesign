@@ -21,6 +21,7 @@
         <common-io.version>2.6</common-io.version>
         <logback.version>1.1.7</logback.version>
         <jdk-version>1.8</jdk-version>
+        <jms-version>2.0.1</jms-version>
     </properties>
 
     <dependencies>
@@ -59,6 +60,18 @@
             <artifactId>spring-aop</artifactId>
             <version>${springVersion}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+            <version>${springVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.jms</groupId>
+            <artifactId>javax.jms-api</artifactId>
+            <version>${jms-version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework</groupId>
