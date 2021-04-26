@@ -18,7 +18,7 @@
         <fastJson>1.2.62</fastJson>
         <common-lang3>3.9</common-lang3>
         <common-lang>2.6</common-lang>
-        <common-io.version>2.6</common-io.version>
+        <common-io.version>2.7</common-io.version>
         <logback.version>1.1.7</logback.version>
         <jdk-version>1.8</jdk-version>
         <jms-version>2.0.1</jms-version>
