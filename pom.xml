@@ -15,7 +15,7 @@
         <slf4j.version>1.7.5</slf4j.version>
         <springVersion>5.1.3.RELEASE</springVersion>
         <commons-lang3.version>3.3.2</commons-lang3.version>
-        <fastJson>1.2.62</fastJson>
+        <fastJson>1.2.83</fastJson>
         <common-lang3>3.9</common-lang3>
         <common-lang>2.6</common-lang>
         <common-io.version>2.6</common-io.version>
